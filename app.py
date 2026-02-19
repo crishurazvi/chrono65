@@ -429,6 +429,60 @@ html = r"""
       .cardGrow{ flex: unset; }
       .historyScroll{ max-height: 360px; }
     }
+    /* ===== MOBILE FIX: 1 col + texte care se văd complet ===== */
+@media (max-width: 720px){
+  .wrap{
+    flex-direction: column;
+    height: auto;
+  }
+
+  body{
+    overflow: auto; /* permite scroll normal pe mobil */
+  }
+
+  .cardHeader{
+    flex-direction: column;     /* titlu + chip pe rânduri */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .clockChip{
+    width: 100%;
+    min-width: 0;              /* important: nu mai forțează lățime mare */
+    text-align: left;
+    white-space: normal;       /* să se rupă pe linii dacă e nevoie */
+  }
+
+  .title{
+    font-size: 20px;           /* opțional: mai lizibil */
+    line-height: 1.15;
+  }
+
+  .sub{
+    font-size: 14px;
+    line-height: 1.25;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  /* în bannerul cu dispozitiv: lasă textul să se rupă */
+  .stateBanner{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .itemTitle{
+    white-space: normal;       /* în loc de nowrap */
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  /* selecturi/inputuri pe mobil să nu fie tăiate */
+  select, .input{
+    font-size: 18px;
+  }
+}
   </style>
 </head>
 <body>
