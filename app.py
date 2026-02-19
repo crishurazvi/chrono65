@@ -63,8 +63,8 @@ html = r"""
       align-items:stretch;
       justify-content:center;
 
-      height: 100vh;
-      overflow: hidden;
+      height: auto;
+      overflow: auto;
     }
 
     .wrap{
