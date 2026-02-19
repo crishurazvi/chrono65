@@ -75,6 +75,7 @@ html = r"""
 
       height: 100%;
       min-height: 0;
+      overflow: auto;
     }
 
     .col{
@@ -91,7 +92,7 @@ html = r"""
       border: 1px solid var(--stroke);
       border-radius: var(--radius);
       box-shadow: var(--shadow2);
-      overflow:hidden;
+      overflow:auto;
       min-height: 0;
     }
 
@@ -299,7 +300,7 @@ html = r"""
       font-weight: 850;
       font-size: 15px;
       white-space:nowrap;
-      overflow:hidden;
+      overflow:auto;
       text-overflow:ellipsis;
     }
     .itemMeta{
@@ -371,6 +372,7 @@ html = r"""
       min-height: 0;
       display:flex;
       flex-direction:column;
+      overflow: auto;
     }
     .cardGrow .cardBody{
       flex: 1;
@@ -401,7 +403,7 @@ html = r"""
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 24px;
       box-shadow: var(--shadow);
-      overflow:hidden;
+      overflow:auto;
       backdrop-filter: blur(10px);
     }
     .modalBody{ padding:16px 18px 18px; }
@@ -425,7 +427,7 @@ html = r"""
     @media (max-width: 980px){
       .wrap{ flex-direction:column; }
       body{ overflow:auto; }
-      .wrap{ height:auto; }
+      .wrap{ height:auto; overflow: auto;}
       .cardGrow{ flex: unset; }
       .historyScroll{ max-height: 360px; }
     }
@@ -434,6 +436,7 @@ html = r"""
   .wrap{
     flex-direction: column;
     height: auto;
+    overflow: auto;
   }
 
   body{
@@ -490,6 +493,7 @@ html = r"""
   }
   .wrap{
     height: auto !important;
+    overflow: auto;
   }
 }
   </style>
