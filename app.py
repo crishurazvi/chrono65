@@ -483,6 +483,15 @@ html = r"""
     font-size: 18px;
   }
 }
+@media (max-width: 720px){
+  body{
+    height: 100%;
+    overflow: auto !important;
+  }
+  .wrap{
+    height: auto !important;
+  }
+}
   </style>
 </head>
 <body>
@@ -1184,4 +1193,4 @@ html = r"""
 """
 
 # Important: height mare ca să arate ca o aplicație full-screen
-components.html(html, height=920, scrolling=False)
+components.html(html, height=920, scrolling=True)
